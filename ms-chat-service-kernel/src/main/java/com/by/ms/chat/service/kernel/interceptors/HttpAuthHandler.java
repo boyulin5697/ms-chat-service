@@ -37,7 +37,7 @@ public class HttpAuthHandler extends TextWebSocketHandler {
                 long messageSize = RedisUtil.lGetListSize(oqName);
                 for(int i = 0;i<messageSize-1;i++){
                     MessageString ms = (MessageString) RedisUtil.lPop(oqName);
-                    TextMessage textMessage = new TextMessage(ms.getMessageContent());
+                    TextMessage textMessage = new TextMessage(JSONObject.toJSONString(ms));
                     try {
                         session.sendMessage(textMessage);
                     } catch (IOException e) {}
