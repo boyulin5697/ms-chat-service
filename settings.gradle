@@ -1,0 +1,8 @@
+rootProject.name = 'ms-chat-service'
+include 'ms-chat-service-core'
+include 'ms-chat-service-kernel'
+include 'ms-chat-service-gateway'
+include 'ms-chat-service-core'
+include 'ms-chat-service-kernel'
+include 'ms-chat-service-gateway'
+
